@@ -37,10 +37,10 @@ const Container = styles.div`
   }
 
   .a-left img {
-    padding: 30px;
+    border-radius: 10px;
+    margin-right: 60px;
     width: 350px;
     border-radius: 10px;
-    margin-right: 127px;
   }
 
   .a-right {
