@@ -67,4 +67,44 @@ const Container = styles.div`
       font-size: 3rem;
     }
   }
+
+  @media (max-width: 576px) {
+    button {
+      font-size: 1rem;
+    }
+
+    .h-info h1 {
+      font-size: 2rem;
+    }
+    
+    .h-hero {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .h-info h1 {
+      font-size: 1.2rem;
+    }
+
+    .h-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    section {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .h-hero {
+      max-width: 100px;
+      margin-bottom: 8px;
+    }
+
+    .h-hero img {
+      padding: 0;
+      margin: 0;
+    }
+  }
 `

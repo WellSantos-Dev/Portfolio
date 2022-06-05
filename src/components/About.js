@@ -9,7 +9,7 @@ import { Button } from './Button';
 export const About = () => {
   return (
     <Container>
-      <Intro p="Whoami" h1="About me"/>
+      <Intro p="Whoami" h1="About me" className="whoami"/>
       <section>
         <div className="a-left">
           <img src={profile} alt="Imagem representando o dono do site." />
@@ -29,11 +29,13 @@ export const About = () => {
 }
 
 const Container = styles.div`
-  section {
-    display: flex;
-    align-items: center;
+
+section {
+  display: flex;
+  align-items: center;
     justify-content: center;
     padding: 30px;
+    margin: 30px;
   }
 
   .a-left img {
@@ -70,5 +72,45 @@ const Container = styles.div`
     color: #E0DAFA;
     background-color: #401BD9;
     cursor: pointer;
+  }
+  
+  @media (max-width: 1024px) {
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .a-left img {
+      border-radius: 10px;
+      padding-bottom: 30px;
+      margin: 0;
+    }
+
+    .a-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .a-right p {
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 `

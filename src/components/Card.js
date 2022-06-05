@@ -40,4 +40,11 @@ const Container = styles.div`
   img {
     width: 24px;
   }
+
+  @media (max-width: 500px) {
+    .card {
+      width: 300px;
+      height: 240px;
+    }
+  }
 `
