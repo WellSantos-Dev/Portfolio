@@ -18,13 +18,13 @@ export const Header = () => {
 
   return(
     <Container>
-        <header>
+        <div className="container">
+        <header className="header">
           <h3>Well Santos</h3>
           <nav ref={navRef}>
             <a href="#home" onClick={closeClass}>Home</a>
-            <a href="#about" onClick={closeClass}>About</a>
-            <a href="#experience" onClick={closeClass}>Skills</a>
-            <a href="#portfolio" onClick={closeClass}>Portfolio</a>
+            <a href="#experiencia" onClick={closeClass}>Experiência</a>
+            <a href="#formacao" onClick={closeClass}>Formação</a>
             <button onClick={toggleClass} className="btn-style btn-close">
               <FaTimes />
             </button>
@@ -33,26 +33,32 @@ export const Header = () => {
           <FaBars />
           </button>
         </header>
+        </div>
     </Container>
   )
 }
 
 const Container = styles.div`
-  header {
+
+  .container {
     position: fixed;
     background-color: #fff;
     top: 0;
     left: 0;
     width: 100vw;
-
+  }
+  
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 60px;
+    padding: 30px 30px;
+    max-width: 1160px;
+    margin: 0 auto;
   }
 
   header nav a { 
-    padding: 10px;
+    padding: 10px 0 0 40px;
     color: #333;
     text-decoration: none;
     font-weight: 500;
@@ -94,7 +100,7 @@ const Container = styles.div`
       position: absolute;
       top: 0;
       right: 0;
-      padding: 30px 60px;
+      padding: 30px 30px;
     }
   }
 `

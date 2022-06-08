@@ -1,110 +1,120 @@
 import styles from 'styled-components'
-import perfil from '../assets/perfil.jpg';
-import { Button } from './Button';
+import perfil from '../assets/profile.jpeg';
 
 export const Home = () => {
   return (
     <Container>
-      <section>
-        <div className="h-hero">
-          <img src={perfil} alt="perfil" />
-        </div>
+      <div className="container">
+        <section className="h-section">
+          <div className="h-hero">
+            <img src={perfil} alt="perfil" />
+          </div>
 
-        <div className="h-info">
-          <p>Hello, im</p>
-          <h1>Front-end Developer & UI/UX Designer</h1>
-          <Button text="Download CV" className="downloadCV"/>
-        </div>
-          
-      </section>
+          <div className="h-info">
+            <h1>Front-end Developer & UI/UX Designer</h1>
+            <p>Localizado no Litoral Norte - SP 🏖️</p>
+          </div>
+            
+        </section>
+      </div>
     </Container>
   )
 }
 
 const Container = styles.div`
-  section {
+  .container {
+    max-width: 100vw;
+    padding-top: 160px;
+    
+  }
+  
+  .h-section {
+    margin: 0 auto;
+    max-width: 1160px;
+    padding: 0 30px;
+    
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 30px;
-    height: calc(100vh - 90px);
-    margin-top: 100px;
-  }
-
-  button {
-    padding: 15px;
-    background-color: #401BD9;
-    color: #E0DAFA;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700;
-    margin-top: 12px;
   }
 
   .h-hero {
-    max-width: 300px;
-    margin-right: 60px;
+    self-align: start;
+    margin-right: 8.75rem;
+    
+    img {
+      max-width: 22.5rem;
+      border-radius: 10px;
+    }
   }
+
 
   .h-info {
-    max-width: 700px;
-  }
+    max-width: 34.375rem;
 
-  .h-info p {
-    font-size: 1rem;
-    color: #7a7a7e;
-  }
+    h1 {
+      font-size: 4.5rem;
+      color: #141414;
+      padding-bottom: 1.875rem;
+    }
 
-  .h-info h1 {
-    font-size: 3.875rem;
-    font-weight: 700;
-  }
-
-  @media (max-width: 1024px) {
-    .h-info h1 {
-      font-size: 3rem;
+    p {
+      font-size: 1.5rem;
+      color: #525252;
     }
   }
 
-  @media (max-width: 576px) {
-    button {
-      font-size: 1rem;
-    }
 
-    .h-info h1 {
-      font-size: 2rem;
-    }
-    
+  @media (max-width: 990px) {
     .h-hero {
-      width: 300px;
-    }
-  }
+      margin-right: 4rem;
 
-  @media (max-width: 500px) {
-    .h-info h1 {
-      font-size: 1.2rem;
+      img {
+        max-width: 15rem;
+      }
     }
 
     .h-info {
+      h1 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+  @media (max-width: 575px) { 
+    .h-section {
       display: flex;
       flex-direction: column;
     }
 
-    section {
-      flex-direction: column;
-      margin-bottom: 20px;
-    }
-
     .h-hero {
-      max-width: 100px;
-      margin-bottom: 8px;
-    }
-
-    .h-hero img {
-      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0;
+
+      img {
+        padding-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
+
     }
-  }
-`
+    
+    .h-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      }
+    }
+   }
+  `
