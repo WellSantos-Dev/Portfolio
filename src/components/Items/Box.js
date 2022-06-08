@@ -1,12 +1,13 @@
 import styles from 'styled-components'
 
-export const Box = ({ano, nomeProjeto, p, tecnologias}) => {
+export const Box = ({ano, nomeProjeto, p, tecnologias, linkProjeto}) => {
   return (
     <Container>
       <div className="box">
         <div className="info-projeto">
           <h1>{nomeProjeto}</h1>
           <p>{p}</p>
+          <a href={linkProjeto} target="_blank" >VER PROJETO</a>
         </div>
         <div className="tecnologias">
           {tecnologias.map((tecnologia) => (
@@ -27,6 +28,11 @@ const Container = styles.div`
     padding: 20px;
     margin: 20px 0;
 
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
     .info-projeto {
       max-width: 325px;
     }
@@ -43,6 +49,7 @@ const Container = styles.div`
       font-size: 0.875rem;
       color: #525252;
       line-height: 20px;
+      padding-bottom: 0.625rem;
     }
 
     .tecnologias {
