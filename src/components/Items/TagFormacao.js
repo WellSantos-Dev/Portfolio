@@ -20,8 +20,6 @@ const Container = styles.div`
     background-color: #090909;
     border: 1px solid #000;
     border-radius: 5px;
-    padding: 20px;
-    margin-right: 20px;
 
 
     p {

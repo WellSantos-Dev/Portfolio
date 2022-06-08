@@ -130,8 +130,11 @@ const Container = styles.div`
       }
 
       .f-right {
-        p {
-          font-size: 1.2rem;
+        .formacoes {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 10px;
+        }
           padding: 0 20px;
           margin-bottom: 2rem;
         }
