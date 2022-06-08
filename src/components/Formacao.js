@@ -15,7 +15,7 @@ export const Formacao = () => {
             <p>Minhas mais recentes experiências acadêmicas 🎓 foram <span id="color-white">ADS e Sistemas para Internet</span>. Além disso me mantenho sempre atualizado com cursos intensivos online.</p>
             <div className="formacoes">
               <TagFormacao tipo="Técnologo" nome="Sistemas para internet" local="UniAsselvi"/>
-              <TagFormacao tipo="Técnologo" nome="Analise e desenvolvimento de sistemas" local="UniCesumar"/>
+              
             </div>
 
             <div className="certificados">
