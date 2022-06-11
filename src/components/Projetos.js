@@ -1,5 +1,6 @@
 import styles from 'styled-components'
 import { Link } from 'react-router-dom'
+import { ProjetoContainer } from './ProjetoContainer'
 
 export const Projetos = () => {
   return (
@@ -15,7 +16,7 @@ export const Projetos = () => {
           </div>
         </header>
       </div>
-      <h1>Página contendo projetos em desenvolvimento!</h1>
+      <ProjetoContainer />
     </Container>
   )
 }
