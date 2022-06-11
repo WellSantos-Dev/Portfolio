@@ -1,4 +1,7 @@
 import styles from 'styled-components'
+import dogs from '../assets/project-photo/dogs.png'
+import bikcraft from '../assets/project-photo/bikcraft.png'
+import { Link } from 'react-router-dom'
 
 // Import Components
 import { Box } from './Items/Box'
@@ -15,9 +18,9 @@ export const Experience = () => {
           <div className="e-right">
             <div className="aprensentacao">
               <p id="whoami">Há cerca de 4 anos atrás eu comecei praticar Programação. Desenvolvi vários projetos com <span className="bold">ReactJS, NextJS, Styled-Components, Strapi, Stripe, SasS, FaunaDB, oAuth, Prismic CMS, Firebase, JavaScript, HTML e CSS</span>. Os projetos abaixo são os que mais me agregaram conhecimento na pratica e os considero os melhores até agora.</p>
-              <Box ano="2021" nomeProjeto="Rede Social - Dogs" p="Desenvolvido com ReactJS, CSS e uma API do wordpress - pela qual recebi dados de usuarios. A aplicação é uma rede social para cachorro. Ela tem um sistema de login, recuperação de senha, cadastro de usuario, fazer post, dar like em post e comentar. Desenvolvi também uma parte apenas para gerenciar dados de acesso em gráfico." tecnologias={['ReactJS', 'Styled-components', 'API WordPress']} linkProjeto="https://redesocialdogs.vercel.app/"/>
-              <Box ano="2022" nomeProjeto="Bikcraft" p="Este projeto foi desenvolvido com ReactJS e styled-components. Fiz a integração dele com uma API chamada Commerce.JS pra fazer o fetch dos produtos. Ele tem funcionalidade como Adicionar e remover produto do carrinho." tecnologias={['ReactJS', 'Styled-components', 'Commerce.js']}/>
-              <Box ano="2022" nomeProjeto="IGNEWS" p="Este projeto foi desenvolvido com NextJS, SasS, FaunaDB, Stipe, Prismic CSM. A aplicação é um blog com sistema de autenticação. Logado, o usuário pode comprar o plano VIP para poder ler os posts dos blogs. " tecnologias={['NextJS', 'FaunaDB', 'Prismic CMS', 'stripe', 'Github oAuth', 'SasS']}/>
+              <Box ano="2021" nomeProjeto="Rede Social - Dogs" p="Desenvolvido com ReactJS, CSS e uma API do wordpress - pela qual recebi dados de usuarios. A aplicação é uma rede social para cachorro. Ela tem um sistema de login, recuperação de senha, cadastro de usuario, fazer post, dar like em post e comentar. Desenvolvi também uma parte apenas para gerenciar dados de acesso em gráfico." tecnologias={['ReactJS', 'Styled-components', 'API WordPress']} linkProjeto="https://redesocialdogs.vercel.app/" imagem={dogs}/>
+              <Box ano="2022" nomeProjeto="Bikcraft" p="Este projeto foi desenvolvido com ReactJS e styled-components. Fiz a integração dele com uma API chamada Commerce.JS pra fazer o fetch dos produtos. Ele tem funcionalidade como Adicionar e remover produto do carrinho." tecnologias={['ReactJS', 'Styled-components', 'Commerce.js']} linkProjeto="https://bikcraft-redesign.vercel.app/" imagem={bikcraft}/>
+              <Link to="/projetos">Veja mais projetos</Link>
             </div>
           </div>
           
@@ -57,14 +60,27 @@ const Container = styles.div`
     .e-right {
 
       .aprensentacao{
-         font-size: 1.5rem;
-         font-weight: 400;
-         color: #525252;
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: #525252;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
 
-        #whoami {
-          padding-left: 2.25rem;
-          padding-bottom: 3.75rem;
-        }
+
+         #whoami {
+           padding-left: 2.25rem;
+           padding-bottom: 3.75rem; 
+          }
+
+          #seeMoreProjects {
+            color: #000;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+          }
+          
       }
     }
 

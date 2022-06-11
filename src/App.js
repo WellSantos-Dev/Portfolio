@@ -1,28 +1,20 @@
 import React from 'react';
 import './global.styles.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Import components
 import { Header } from './components/Header';
-import { Home } from './components/Home'
-import { Experience } from './components/Experience';
-import { Formacao } from './components/Formacao'
-import { Footer } from './components/Footer';
+import { Main } from './components/Main';
+import { Projetos } from './components/Projetos';
 
 function App() {
   return (
-    <>
-      <Header />
-      <div id="home">
-        <Home />
-      </div>
-      <div id="experiencia">
-        <Experience />
-      </div>
-      <div id="formacao">
-        <Formacao />
-      </div>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/projetos" element={<Projetos />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

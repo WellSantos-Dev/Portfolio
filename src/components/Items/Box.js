@@ -1,19 +1,21 @@
 import styles from 'styled-components'
 
-export const Box = ({ano, nomeProjeto, p, tecnologias, linkProjeto}) => {
+export const Box = ({ano, nomeProjeto, tecnologias, linkProjeto, imagem}) => {
   return (
     <Container>
       <div className="box">
-        <div className="info-projeto">
+        <img src={imagem} alt={nomeProjeto} />
+        <div className="container-projeto">
+          <div className="info-projeto">
           <h1>{nomeProjeto}</h1>
-          <p>{p}</p>
-          <a href={linkProjeto} target="_blank" >VER PROJETO</a>
         </div>
         <div className="tecnologias">
           {tecnologias.map((tecnologia) => (
-            <div className="eachTec">{tecnologia}</div>
-          ))}
+            <div className="eachTec" key={tecnologia}>{tecnologia}</div>
+            ))}
         </div>
+      </div>
+            <a href={linkProjeto} target="_blank" rel="noreferrer">VER PROJETO</a>
       </div>
     </Container>
   )
@@ -22,52 +24,57 @@ export const Box = ({ano, nomeProjeto, p, tecnologias, linkProjeto}) => {
 const Container = styles.div`
   .box {
     display: flex;
-    justify-content: space-between;
-    background-color: #F5F5F5;
-    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    margin: 20px 0;
+    background-color: #f3f3f3;
+    margin-bottom: 2rem;
+    border-radius: 5px;
 
-    a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    .info-projeto {
-      max-width: 325px;
-    }
-
-    h1 {
-      font-size: 1rem;
-      color: #000;
-      font-weight: 700;
-      padding-bottom: 0.625rem;
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 0.875rem;
-      color: #525252;
-      line-height: 20px;
-      padding-bottom: 0.625rem;
+    .container-projeto {
+      .info-projeto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     .tecnologias {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    
-    .eachTec {
-      padding: 5px 10px;
-      background-color: #fff;
-      font-size: 0.875rem;
-      color: #141414;
-      margin: 10px;
-      display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+
+      .eachTec {
+        padding: 10px 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+        margin-bottom: 2rem;
+      }
+    }
+    
+    img {
+      max-width: 400px;
+      margin-bottom: 1.5rem;
+      border-radius: 5px;
+      margin-top: 2rem;
     }
 
+    h1 {
+      font-size: 2rem;
+      padding-bottom: 0.5rem;
+    }
+
+    a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.3rem;
+      background-color: #000;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      display: block;
+    }
   }
 `

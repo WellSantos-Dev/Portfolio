@@ -20,11 +20,12 @@ export const Header = () => {
     <Container>
         <div className="container">
         <header className="header">
-          <h3>Well Santos</h3>
+          <h3><Link to="/">WellSantos</Link></h3>
           <nav ref={navRef}>
             <a href="#home" onClick={closeClass}>Home</a>
             <a href="#experiencia" onClick={closeClass}>Experiência</a>
             <a href="#formacao" onClick={closeClass}>Formação</a>
+            <Link to="/projetos">Projetos</Link>
             <button onClick={toggleClass} className="btn-style btn-close">
               <FaTimes />
             </button>
@@ -46,6 +47,12 @@ const Container = styles.div`
     top: 0;
     left: 0;
     width: 100vw;
+  }
+
+  h3 a {
+    color: #333;
+    font-size: 1.5rem;
+    text-decoration: none;
   }
   
   header {
