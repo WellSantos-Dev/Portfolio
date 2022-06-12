@@ -1,6 +1,7 @@
 import imageBirthday from '../../assets/project-photo/simpleProjects/birthday-list.png'
 import excludeCandidates from '../../assets/project-photo/simpleProjects/exclude.png'
 import testimonials from '../../assets/project-photo/simpleProjects/testimonials.png'
+import questions from '../../assets/project-photo/simpleProjects/questions.png'
 import imageDogs from '../../assets/project-photo/dogs.png'
 import imageBikcraft from '../../assets/project-photo/bikcraft.png'
 
@@ -24,6 +25,12 @@ export default [
       name: 'Testimonials',
       url: 'https://testimonial-eight.vercel.app/',
       image: `${testimonials}`,
+    },
+    {
+      id: 4,
+      name: 'Accordion',
+      url: 'https://accordion-beta-lyart.vercel.app/',
+      image: `${questions}`,
     },
   ],
     // PROJETOS GRANDES
