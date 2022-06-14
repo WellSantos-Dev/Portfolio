@@ -5,6 +5,7 @@ import questions from '../../assets/project-photo/simpleProjects/questions.png'
 import cardapio from '../../assets/project-photo/simpleProjects/cardapio.png'
 import imageDogs from '../../assets/project-photo/dogs.png'
 import imageBikcraft from '../../assets/project-photo/bikcraft.png'
+import devfront from '../../assets/project-photo/devfront.png'
 
 export default [
     // PROJETOS PEQUENOS
@@ -54,5 +55,11 @@ export default [
       url: 'https://bikcraft-redesign.vercel.app/',
       image: `${imageBikcraft}`,
     },
+    {
+      id: 8,
+      name: 'DevFront | Refazendo',
+      url: 'https://devfrontmaster.vercel.app/',
+      image: `${devfront}`,
+    }
   ]
 ]
