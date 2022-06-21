@@ -3,7 +3,6 @@ import './global.styles.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Import components
-import { Header } from './components/Header';
 import { Main } from './components/Main';
 import { Projetos } from './components/Projetos';
 

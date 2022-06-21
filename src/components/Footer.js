@@ -10,7 +10,7 @@ export const Footer = () => {
           </div>
 
           <div className="c-right">
-            <h1>wellsantosprofissinal.dev@gmail.com</h1>
+            <h1>wellsantosprofissional.dev@gmail.com</h1>
             <h1>(012) 99608-8228</h1>
             <h1>@well_dev</h1>
           </div>
